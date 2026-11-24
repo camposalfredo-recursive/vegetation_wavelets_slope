@@ -1,0 +1,2 @@
+region,tile,pixel_id,row,col,lat,lon,lt_evi_slope,is_agro,evi_mean,lt_evi_slope_evi_summer_mean,pp_slope,temp_slope,residuals_slope,residuals_mean,temp_coef,pp_coef
+arg,output_slope_energy_MOD13Q1_EVI_0000000000-0000000000,920_682,920,682,-29.898958330657276,-63.64229453555573,0.10933010589749771,1.0,0.2848542428785607,0.03114314191043377,-3.19916826980662e-05,0.04382022591524346,6.284690263045059,1.4365907744555126e-07,,

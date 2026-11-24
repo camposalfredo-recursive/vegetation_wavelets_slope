@@ -1,0 +1,81 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Parquet Wavelets Slope ARG (dataset/samples.parquet)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/process_parquet_wavelets_slope.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--input",
+                "dataset/samples.parquet",
+                "--region",
+                "arg",
+                "--detrend",
+                "true",
+                "--params",
+                "{\"level\": 5, \"start_doy_agro\": 183, \"first_date\": \"2015-07-01\", \"last_date\": \"2025-12-31\", \"nan_values\": -10000, \"min_evi_threshold\": 2600, \"max_evi_threshold\": 5700, \"summer_crop_season\": {\"min\": 289, \"max\": 97}, \"summer_peak_modis_dates\": {\"min\": 337, \"max\": 81}, \"new_period\": 0, \"satellite\": \"modis\", \"detrend_model\": \"gam_current\"}",
+                "--output",
+                "output/slope_arg.csv",
+                "--pixel-ids",
+                "output_slope_energy_MOD13Q1_EVI_0000000000-0000000000:920_682",
+                "--plot-dir",
+                "output/plots",
+                "--workers",
+                "1"
+            ]
+        },
+        {
+            "name": "Python Debugger: Parquet Wavelets Slope ARG - all pixels",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/process_parquet_wavelets_slope.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--input",
+                "dataset/samples.parquet",
+                "--region",
+                "arg",
+                "--detrend",
+                "true",
+                "--params",
+                "{\"level\": 5, \"start_doy_agro\": 183, \"first_date\": \"2015-07-01\", \"last_date\": \"2025-12-31\", \"nan_values\": -10000, \"min_evi_threshold\": 2600, \"max_evi_threshold\": 5700, \"summer_crop_season\": {\"min\": 289, \"max\": 97}, \"summer_peak_modis_dates\": {\"min\": 337, \"max\": 81}, \"new_period\": 0, \"satellite\": \"modis\", \"detrend_model\": \"gam_current\"}",
+                "--output",
+                "output/slope_arg_all.csv",
+                "--workers",
+                "8"
+            ]
+        },
+        {
+            "name": "Python Debugger: Parquet Wavelets Slope USA - all pixels",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/process_parquet_wavelets_slope.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--input",
+                "dataset/samples.parquet",
+                "--region",
+                "usa",
+                "--detrend",
+                "true",
+                "--params",
+                "{\"level\": 5, \"start_doy_agro\": 1, \"first_date\": \"2016-01-01\", \"last_date\": \"2025-12-31\", \"nan_values\": -10000, \"min_evi_threshold\": 2600, \"max_evi_threshold\": 5500, \"summer_crop_season\": {\"min\": 152, \"max\": 243}, \"summer_peak_modis_dates\": {\"min\": 152, \"max\": 243}, \"new_period\": 0, \"satellite\": \"modis\", \"detrend_model\": \"gam_current\"}",
+                "--output",
+                "output/slope_usa_all.csv",
+                "--workers",
+                "8"
+            ]
+        }
+    ]
+}
